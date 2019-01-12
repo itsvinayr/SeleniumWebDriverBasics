@@ -1,0 +1,7 @@
+<suite name="testNG Suite">
+	<test name="Sample Tests">
+		<classes>
+			<class name="com.learning.selenium.seleniumWebDriverBasics.testng.FactoryAndDataProvider" />
+		</classes>
+	</test>
+</suite>
