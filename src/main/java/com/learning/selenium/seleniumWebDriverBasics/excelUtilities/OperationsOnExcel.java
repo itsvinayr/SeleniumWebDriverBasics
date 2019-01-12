@@ -1,4 +1,4 @@
-package com.learning.selenium.seleniumWebDriverBasics.excelOperations;
+package com.learning.selenium.seleniumWebDriverBasics.excelUtilities;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,17 +14,8 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class OperationsOnExcel {
-
-	public static void main(String[] args) throws IOException {
-
-		readExcel("Vinay");
-		writeExcel("Vinay");
-		readExcel("Vinay");
-		
-	}
 	
-	@SuppressWarnings("resource")
-	public static Object[][] readExcel(String sheetName) throws IOException {
+	public static Object[][] readExcel(String excelFileName, String sheetName) throws IOException {
 		
 		Object[][] data = null;
 		Workbook workBook = null;
@@ -33,8 +24,8 @@ public class OperationsOnExcel {
 		DataFormatter formatter = null;
 		String stringValue = null;
 		
-		String fileName = "Humans.xlsx";
-		String filePath = System.getProperty("user.dir")+"\\src\\com\\day6\\selenium\\excel\\"+fileName;
+		String fileName = excelFileName;
+		String filePath = System.getProperty("user.dir")+"\\src\\test\\resources\\excelFiles\\"+fileName;
 		
 		FileInputStream fileInputStream = new FileInputStream(new File(filePath));
 		
@@ -62,20 +53,20 @@ public class OperationsOnExcel {
 		}
 		
 		fileInputStream.close();
+		workBook.close();
 		return data;
 		
 	}
 	
-	@SuppressWarnings("resource")
-	public static void writeExcel(String sheetName) throws IOException {
+	public static void writeExcel(String excelFileName, String sheetName) throws IOException {
 		
 		Workbook workBook = null;
 		Sheet sheet = null;
 		Row firstRow, newRow = null;
 		Cell cell = null;
 		
-		String fileName = "Humans.xlsx";
-		String filePath = System.getProperty("user.dir")+"\\src\\com\\day6\\selenium\\excel\\"+fileName;
+		String fileName = excelFileName;
+		String filePath = System.getProperty("user.dir")+"\\src\\test\\resources\\excelFiles\\"+fileName;
 		
 		FileInputStream fileInputStream = new FileInputStream(new File(filePath));
 		
@@ -90,7 +81,7 @@ public class OperationsOnExcel {
 		
 		firstRow = sheet.getRow(0);
 		newRow = sheet.createRow(rowCount+1);
-		for(int i=0;i<=firstRow.getLastCellNum();i++) {
+		for(int i=0;i<firstRow.getLastCellNum();i++) {
 			cell = newRow.createCell(i);
 			cell.setCellValue(i);
 		}
@@ -101,6 +92,7 @@ public class OperationsOnExcel {
 		workBook.write(fileOutputStream);
 		
 		fileOutputStream.close();
+		workBook.close();
 		
 	}
 
