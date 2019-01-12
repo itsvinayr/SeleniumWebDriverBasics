@@ -18,7 +18,8 @@ public class ScreenShot {
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://google.com");
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		File dest = new File("C:\\Users\\vinay\\Downloads\\AutomationScreenshots");
+		File dest = new File(System.getProperty("user.dir")+"\\src\\test\\resources\\screenshots\\"
+												+System.currentTimeMillis()+".png");
 		FileUtils.copyFile(src, dest);
 		driver.quit();
 	}
