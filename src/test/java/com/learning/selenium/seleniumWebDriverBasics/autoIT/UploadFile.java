@@ -28,7 +28,7 @@ public class UploadFile {
 		driver.get(url);
 		driver.findElement(By.id("photo")).click();
 		Thread.sleep(5000L);
-		Runtime.getRuntime().exec("C://Users//vinay//Downloads//AutoITScripts//Upload.exe");
+		Runtime.getRuntime().exec(System.getProperty("user.dir")+"\\src\\test\\resources\\autoITScripts\\UploadFile.exe");
 		Thread.sleep(5000L);
 	}
 	
