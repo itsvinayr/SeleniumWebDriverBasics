@@ -15,7 +15,7 @@ public class DoubleClick {
 	@Test
 	public void testDoubleClick() throws InterruptedException {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		String URL = "http://only-testing-blog.blogspot.com/2014/09/selectable.html";
 		 

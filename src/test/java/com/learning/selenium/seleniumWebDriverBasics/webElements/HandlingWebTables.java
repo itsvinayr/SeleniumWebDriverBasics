@@ -14,7 +14,7 @@ public class HandlingWebTables {
 	@Test
 	public void printTableData() {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://toolsqa.com/automation-practice-table/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

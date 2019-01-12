@@ -15,7 +15,7 @@ public class HandlingPopUps {
 	@Test
 	public void handleAlerts() {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://demo.guru99.com/test/delete_customer.php");
 		driver.findElement(By.name("cusid")).sendKeys("53920");					
@@ -40,7 +40,7 @@ public class HandlingPopUps {
 	public void handleMultipleWindows() throws InterruptedException {
 		WebDriver driver = null;
 		String childHandle = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://demo.guru99.com/popup.php");
 		String mainWindow = driver.getWindowHandle();

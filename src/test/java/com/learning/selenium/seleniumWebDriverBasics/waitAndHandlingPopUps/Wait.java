@@ -21,7 +21,7 @@ public class Wait {
 	@Test
 	public void implicitWait() {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://toolsqa.wpengine.com/automation-practice-form");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -35,7 +35,7 @@ public class Wait {
 	@Test
 	public void fluentWait() {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://softwaretestingplace.blogspot.com/2017/02/selenium-fluent-wait.html");
 		driver.findElement(By.xpath("//*[@id='post-body-5280210221385817166']/div[1]/button")).click();
@@ -69,7 +69,7 @@ public class Wait {
 	public void webDriverWait() {
 		WebDriver driver = null;
 		WebDriverWait wait = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://softwaretestingplace.blogspot.com/2017/02/selenium-fluent-wait.html");
 		driver.manage().window().maximize();
@@ -89,7 +89,7 @@ public class Wait {
 	@Test
 	public void pageLoadAndScriptTimeout() {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://softwaretestingplace.blogspot.com/2017/02/selenium-fluent-wait.html");
 		driver.manage().window().maximize();

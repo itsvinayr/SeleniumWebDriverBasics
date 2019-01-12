@@ -15,7 +15,7 @@ public class DropDown {
 	@Test
 	public void usingSelect() throws InterruptedException {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://toolsqa.wpengine.com/automation-practice-form");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -36,7 +36,7 @@ public class DropDown {
 	@Test
 	public void usingFindElementByTagname() throws InterruptedException {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://toolsqa.wpengine.com/automation-practice-form");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

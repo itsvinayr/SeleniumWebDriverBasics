@@ -14,7 +14,7 @@ public class ScreenShot {
 	
 	@Test
 	public void takeScreenshot() throws IOException {
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://google.com");
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);

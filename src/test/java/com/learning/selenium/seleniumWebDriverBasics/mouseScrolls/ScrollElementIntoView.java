@@ -12,7 +12,7 @@ public class ScrollElementIntoView {
 	@Test
 	public void testScrollElementIntoView() {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://www.google.com");
 		JavascriptExecutor jexec = (JavascriptExecutor)driver;
@@ -23,7 +23,7 @@ public class ScrollElementIntoView {
 	@Test
 	public void testScrollWebPage() {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://www.google.com");
 		JavascriptExecutor jexec = (JavascriptExecutor)driver;

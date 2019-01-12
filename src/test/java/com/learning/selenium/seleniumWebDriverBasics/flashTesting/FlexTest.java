@@ -11,7 +11,7 @@ public class FlexTest {
 	@Test
 	public void testFlexApp() throws InterruptedException {
 		WebDriver driver = null;
-		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		FlashObjectWebDriver flashApp = new FlashObjectWebDriver(driver, "myFlashMovie");
 		driver.get("http://demo.guru99.com/test/flash-testing.html");

@@ -12,7 +12,7 @@ public class HandlingIframes {
 	@Test
 	public void handleFrames() {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://demo.guru99.com/test/guru99home/");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

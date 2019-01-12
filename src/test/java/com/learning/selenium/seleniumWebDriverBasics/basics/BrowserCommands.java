@@ -9,7 +9,7 @@ public class BrowserCommands {
 	@Test
 	public void browserCommands() {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://www.google.com");
 		System.out.println("Title of the page is : ---> "+driver.getTitle());

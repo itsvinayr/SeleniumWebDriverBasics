@@ -10,7 +10,7 @@ public class UntrustedCertificates {
 	
 	@Test
 	public void skipUntrustedCertificates() {
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		DesiredCapabilities capabilites = new DesiredCapabilities();
 		capabilites.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		@SuppressWarnings("deprecation")

@@ -12,7 +12,7 @@ public class LaunchBrowser {
 	public void invokeFirefoxBrowser() {
 		WebDriver driver = null;
 		/* For selenium 3, gecko driver need to be used to invoke firefox browser */
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://www.google.com");
 		driver.quit();
@@ -21,7 +21,7 @@ public class LaunchBrowser {
 	@Test
 	public void invokeChromeBrowser() {
 		WebDriver driver = null;
-		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://www.google.com");
 		driver.quit();
@@ -30,7 +30,7 @@ public class LaunchBrowser {
 	@Test
 	public void invokeIEBrowser() {
 		WebDriver driver = null;
-		System.setProperty("webdriver.ie.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\IEDriverServer.exe");
 		driver = new InternetExplorerDriver();
 		driver.get("http://www.google.com");
 		driver.quit();

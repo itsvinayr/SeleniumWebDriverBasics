@@ -14,7 +14,7 @@ public class UsingLog4J {
 	@Test
 	public void testLog4j() {
 		DOMConfigurator.configure("log4j.xml");
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		Log.info("System property set to gecko driver");
 		driver = new FirefoxDriver();
 		Log.info("driver instantiated");

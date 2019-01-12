@@ -15,7 +15,7 @@ public class ToolTip {
 	@Test
 	public void usingHTML() throws InterruptedException {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		String URL = "http://demo.guru99.com/test/social-icon.html";
 		 
@@ -32,7 +32,7 @@ public class ToolTip {
 	@Test
 	public void usingJquery() throws InterruptedException {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		String URL = "http://demo.guru99.com/test/tooltip.html";
 		 

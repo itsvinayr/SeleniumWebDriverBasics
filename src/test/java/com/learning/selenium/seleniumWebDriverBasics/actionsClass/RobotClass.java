@@ -17,7 +17,7 @@ public class RobotClass {
 	@Test
 	public void usingRobot() throws InterruptedException, AWTException {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		String URL = "http://spreadsheetpage.com/index.php/file/animated_color_scales/";
 		 

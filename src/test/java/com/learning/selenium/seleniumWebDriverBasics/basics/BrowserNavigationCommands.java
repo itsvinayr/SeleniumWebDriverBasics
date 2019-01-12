@@ -10,7 +10,7 @@ public class BrowserNavigationCommands {
 	@Test
 	public void navigationCommands() {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://www.indianrail.gov.in/enquiry/PNR/PnrEnquiry.html?locale=en");
 		System.out.println("Title of the page is : ---> "+driver.getTitle());

@@ -18,7 +18,7 @@ public class BrokenLinks {
 	@Test
 	public void testBrokenLinks() throws IOException {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://www.google.com");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

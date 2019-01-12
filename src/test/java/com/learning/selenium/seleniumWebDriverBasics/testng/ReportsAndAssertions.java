@@ -24,7 +24,7 @@ public class ReportsAndAssertions {
 	public void checkLoggerParameters() {
 		DOMConfigurator.configure("log4j.xml");
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://google.com");
 		Log.info("Web Application Launched succesfully");

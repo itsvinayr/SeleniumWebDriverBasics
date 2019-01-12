@@ -15,7 +15,7 @@ public class DragAndDrop {
 	@Test
 	public void testDragAndDrop() throws InterruptedException {
 		WebDriver driver = null;
-		System.setProperty("webdriver.gecko.driver", "C:\\\\Users\\vinay\\Downloads\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		String URL = "http://www.dhtmlx.com/docs/products/dhtmlxTree/index.shtml";
 		 
