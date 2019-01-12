@@ -1,0 +1,7 @@
+<suite name="testNG Suite">
+	<test name="Prioritizing Tests">
+		<classes>
+			<class name="com.learning.selenium.seleniumWebDriverBasics.testng.SequencingAndPrioritizing" />
+		</classes>
+	</test>
+</suite>

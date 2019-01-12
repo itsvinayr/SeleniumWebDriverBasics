@@ -1,0 +1,16 @@
+<suite name="testNG Suite">
+	<test name="Grouping Tests">
+		<classes>
+			<groups>
+				<define name="AandB">
+					<include name = "A"></include>
+					<include name = "B"></include>
+				</define>
+				<run>
+					<include name = "AandB"></include>
+				</run>
+			</groups>
+			<class name="com.learning.selenium.seleniumWebDriverBasics.testng.Grouping" />
+		</classes>
+	</test>
+</suite>

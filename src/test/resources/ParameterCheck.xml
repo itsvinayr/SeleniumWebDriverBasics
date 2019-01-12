@@ -1,0 +1,8 @@
+<suite name="testNG Suite">
+	<test name="Sample Tests">
+		<parameter name="Browser" value="Chrome"></parameter>
+		<classes>
+			<class name="com.learning.selenium.seleniumWebDriverBasics.testng.UsingParameters" />
+		</classes>
+	</test>
+</suite>
