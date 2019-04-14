@@ -1,0 +1,11 @@
+command to start the hub
+java -jar selenium-server-standalone-2.30.0.jar -role hub
+
+command to start the hub with json configuration
+java -jar selenium-server-standalone-2.53.1.jar -role hub -hubConfig hubconfig.json
+
+command to see the nodes connected on the hub
+http://192.168.1.3:4444/grid/console
+
+command to start the node on the hub
+java -Dwebdriver.gecko.driver="C:\geckodriver.exe" -jar selenium-server-standalone-3.4.0.jar -role webdriver -hub http://192.168.1.3:4444/grid/register -port 5566
