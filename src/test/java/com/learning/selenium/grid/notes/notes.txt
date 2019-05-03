@@ -9,3 +9,11 @@ http://192.168.1.3:4444/grid/console
 
 command to start the node on the hub
 java -Dwebdriver.gecko.driver="C:\geckodriver.exe" -jar selenium-server-standalone-3.4.0.jar -role webdriver -hub http://192.168.1.3:4444/grid/register -port 5566
+
+Sample code:
+DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+capabilities.setBrowser("firefox");
+capablilities.setPlatform(Platform.XP);
+WebDriver driver = new RemoteWebDriver(new URL("hub url"), capabilities);
+
+Grid can be configured on jenkins and register nodes and hub.
